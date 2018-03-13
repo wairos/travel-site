@@ -1,5 +1,3 @@
-$mainBlue: #2f5572;
-
 * {
   margin: 0;
 }
@@ -7,18 +5,19 @@ $mainBlue: #2f5572;
 div {
   display: flex;
   justify-content: center;
-  columns: 300px 2;
+  -webkit-columns: 300px 2;
+          columns: 300px 2;
+}
 
-  h1 {
-    color: $mainBlue;
+div h1 {
+    color: #2f5572;
   }
 
-  p {
+div p {
     line-height: 1.3em;
     color: white;
   }
-}
 
 body {
-  color: $mainBlue;
+  color: #2f5572;
 }

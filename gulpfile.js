@@ -1,16 +1,20 @@
 var gulp = require('gulp'),
-watch = require('gulp-watch');
+watch = require('gulp-watch'),
+postcss = require('gulp-postcss'),
+autoprefixer = require('autoprefixer'),
+cssvars = require('postcss-simple-vars'),
+nested = require('postcss-nested');
 
 gulp.task('default', function(){
   console.log('Hooray - gulp task complete');
 });
 
 gulp.task('styles', function(){
-  console.log('post css');
-});
 
-gulp.task('html', function(){
-  console.log('html hello hello');
+  return gulp.src('./app/assets/styles/styles.css')
+  .pipe(postcss([cssvars, nested, autoprefixer]))
+  .pipe(gulp.dest('./app/temp/styles'));
+
 });
 
 gulp.task('watch', function(){
@@ -19,6 +23,7 @@ gulp.task('watch', function(){
     gulp.start('html');
   });
 
+//watches any css file in /styles or in any sub-folder of /styles
   watch('./app/assets/styles/**/*.css', function(){
     gulp.start('styles');
   });
