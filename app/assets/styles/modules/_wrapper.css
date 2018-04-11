@@ -2,7 +2,7 @@
   overflow: hidden;
   padding-left: 18px;
   padding-right: 18px;
-  max-width: 1200px;
+  max-width: 1236px;
   margin-left: auto;
   margin-right: auto;
   &--medium {
@@ -20,19 +20,5 @@
       margin-bottom: 3.875rem;
     }
   }
-  &__medium-4 {
-    float: left;
-    width: 33.33%;
-  }
-  &__medium-4--larger {
-    width: 37%;
-  }
 
-  &__medium-8 {
-    float: left;
-    width: 66.66%;
-  }
-  $__medium-8--smaller {
-    width: 63%
-  }
 }
